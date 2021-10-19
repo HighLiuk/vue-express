@@ -10,9 +10,15 @@ const PORT = process.env.PORT || 5000
 // Middleware
 app.use(express.json())
 app.use(cors())
+app.use(express.static(__dirname + "/public/"))
 
 // API routes
 app.use("/api/posts", PostRouter)
+
+// SPA
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html")
+})
 
 // Error Middleware
 app.use(errorMiddleware)
