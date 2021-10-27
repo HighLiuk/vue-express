@@ -1,5 +1,8 @@
 /client
 /node_modules
+/dist
 /.vscode
 *.http
 .env
+# Local Netlify folder
+.netlify
