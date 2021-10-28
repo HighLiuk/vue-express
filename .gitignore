@@ -1,6 +1,5 @@
 /client
 /node_modules
-/dist
 /.vscode
 *.http
 .env
