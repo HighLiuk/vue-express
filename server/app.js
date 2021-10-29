@@ -8,18 +8,18 @@ const app = express()
 // Middleware
 app.use(express.json())
 app.use(cors())
-app.use(express.static(__dirname + "/public/"))
+// app.use(express.static("public"))
 
 // API routes
 app.use("/api/posts", PostRouter)
 
 // SPA
-app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html")
-})
+// app.get("*", (req, res) => {
+//   res.sendFile("/public/index.html")
+// })
 
 // Error Middleware
-app.use(errorMiddleware)
+// app.use(errorMiddleware)
 
 // 404
 app.all("/api/*", (req, res) => {
