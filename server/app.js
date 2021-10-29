@@ -3,7 +3,7 @@ const cors = require("cors")
 const PostRouter = require("./routes/api/posts")
 const errorMiddleware = require("./error")
 
-const app = express.Router()
+const app = express()
 
 // Middleware
 app.use(express.json())
